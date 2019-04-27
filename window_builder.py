@@ -1,7 +1,6 @@
 import pygame
 from pygame.locals import *
 
-
 class WindowBuilder():
     __white = pygame.Color(255,255,255)
     __black = pygame.Color(0,0,0)
@@ -12,6 +11,11 @@ class WindowBuilder():
     def __init__(self, width, height):
         self.width = width
         self.height = height
+
+    def updateDisplay(f, self):
+        f(self)
+        pygame.display.update()
+
     # Creation de la fenetre
     def makeWindow(self):
         fenetre = pygame.display.set_mode((self.width, self.height), RESIZABLE)
@@ -25,3 +29,5 @@ class WindowBuilder():
                 rect = pygame.Rect((i, j), (self.__rect_width,self.__rect_height))
                 pygame.draw.rect (self.fenetre, self.__black, rect, self.__margin)
         pygame.display.update()
+
+
