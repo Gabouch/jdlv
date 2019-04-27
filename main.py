@@ -6,7 +6,7 @@ from window_builder import WindowBuilder
 pygame.init()
 
 builder = WindowBuilder()
-builder.makeWindow()
+builder.makeWindow(640, 400)
 
 # Controle de la boucle
 continuer = True
