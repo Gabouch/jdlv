@@ -2,14 +2,19 @@ import pygame
 from pygame.locals import *
 from window_builder import WindowBuilder
 
-# Initialisation de pygame
-pygame.init()
+def main():
+    # Initialisation de pygame
+    pygame.init()
+    
+    # Creation d'un window builder
+    builder = WindowBuilder(640, 400)
+    builder.makeWindow()
+    builder.createGrid()
 
-builder = WindowBuilder()
-builder.makeWindow(640, 400)
+    # Controle de la boucle
+    continuer = True
 
-# Controle de la boucle
-continuer = True
+    while continuer:
+        pass
 
-while continuer:
-    pass
+main()
