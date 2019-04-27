@@ -13,7 +13,7 @@ class WindowModifier():
         self.display_width = fenetre.get_width()
         self.display_height = fenetre.get_height()
         self.margin = rect_margin
-        self.__colors = [[0 for x in range(self.display_width // self.rect_width)]
+        self.__colors = [[False for x in range(self.display_width // self.rect_width)]
                          for y in range(self.fenetre.get_height() // self.rect_height)]
 
     def modifyColors(self):
@@ -26,5 +26,5 @@ class WindowModifier():
                                       ][self.rect_height // self.display_height]
                 rect = pygame.Rect((i, j), (self.rect_width, self.rect_height))
                 pygame.draw.rect(
-                    self.fenetre, self.__white if color == 0 else self.__black, rect, self.margin)
+                    self.fenetre, self.__black if color else self.__white, rect, self.margin)
         pygame.display.update()
