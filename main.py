@@ -1,11 +1,12 @@
 import pygame
 from pygame.locals import *
+from window_builder import WindowBuilder
 
 # Initialisation de pygame
 pygame.init()
 
-# Creation de la fenetre
-fenetre = pygame.display.set_mode((640, 400), RESIZABLE)
+builder = WindowBuilder()
+builder.makeWindow()
 
 # Controle de la boucle
 continuer = True
