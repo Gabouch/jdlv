@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
 from window_builder import WindowBuilder
+from window_modifier import WindowModifier
 
 def main():
     # Initialisation de pygame
@@ -11,7 +12,10 @@ def main():
     builder.makeWindow()
     builder.createGrid()
 
-    # Controle de la boucle
+    # Creation d'un modifier
+    modifier = WindowModifier(builder.fenetre, builder.rect_width, builder.rect_height, builder.margin)
+
+    # Controleur de la boucle
     continuer = True
 
     while continuer:
@@ -22,5 +26,5 @@ def main():
                 continuer = False
             if event.type == MOUSEBUTTONDOWN and event.button == 1:
                 pass
-
+        modifier.redrawGrid()
 main()

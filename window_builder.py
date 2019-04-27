@@ -4,30 +4,26 @@ from pygame.locals import *
 class WindowBuilder():
     __white = pygame.Color(255,255,255)
     __black = pygame.Color(0,0,0)
-    __margin = 1
-    __rect_width = 20
-    __rect_height = 20
+    margin = 1
+    rect_width = 20
+    rect_height = 20
 
     def __init__(self, width, height):
         self.width = width
         self.height = height
 
-    def updateDisplay(f, self):
-        f(self)
-        pygame.display.update()
-
     # Creation de la fenetre
     def makeWindow(self):
-        fenetre = pygame.display.set_mode((self.width, self.height), RESIZABLE)
+        fenetre = pygame.display.set_mode((self.width, self.height)) #, RESIZABLE)
         fenetre.fill(self.__white)
         pygame.display.update()
         self.fenetre = fenetre
 
     def createGrid(self):
-        for i in range(0, self.width, self.__rect_width):
-            for j in range(0, self.height, self.__rect_height):
-                rect = pygame.Rect((i, j), (self.__rect_width,self.__rect_height))
-                pygame.draw.rect (self.fenetre, self.__black, rect, self.__margin)
+        for i in range(0, self.width, self.rect_width):
+            for j in range(0, self.height, self.rect_height):
+                rect = pygame.Rect((i, j), (self.rect_width,self.rect_height))
+                pygame.draw.rect(self.fenetre, self.__black, rect, self.margin)
         pygame.display.update()
 
 
