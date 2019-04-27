@@ -25,6 +25,7 @@ def main():
             if event.type == KEYDOWN and (event.key == K_ESCAPE or K_BACKSPACE):
                 continuer = False
             if event.type == MOUSEBUTTONDOWN and event.button == 1:
-                pass
+                modifier.modifyColors(event.pos[0], event.pos[1])
         modifier.redrawGrid()
+    
 main()
