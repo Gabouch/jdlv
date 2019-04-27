@@ -5,12 +5,12 @@ class WindowBuilder():
     __white = pygame.Color(255,255,255)
     __black = pygame.Color(0,0,0)
     margin = 0
-    rect_width = 20
-    rect_height = 20
+    rect_width = 10
+    rect_height = 10
 
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+    def __init__(self, size):
+        self.width = size
+        self.height = size
 
     # Creation de la fenetre
     def makeWindow(self):

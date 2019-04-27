@@ -3,3 +3,5 @@
 __pycache__/windowBuilder.cpython-37.pyc
 __pycache__/window_builder.cpython-37.pyc
 __pycache__/window_modifier.cpython-37.pyc
+.vscode/launch.json
+__pycache__/gameoflife.cpython-37.pyc
