@@ -8,7 +8,7 @@ def main():
     pygame.init()
 
     # Creation d'un window builder
-    builder = WindowBuilder(640, 400)
+    builder = WindowBuilder(640, 640)
     builder.makeWindow()
     builder.createGrid()
 

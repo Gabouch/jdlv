@@ -19,7 +19,6 @@ class WindowModifier():
     def modifyColors(self, x, y):
         iX = floor(x / self.rect_width)
         jY = floor(y / self.rect_height)
-        print(f"x : {x}, y : {y}")
         self.__colors[jY][iX] = not self.__colors[jY][iX]
 
     def redrawGrid(self):
@@ -27,7 +26,6 @@ class WindowModifier():
             for j in range(0, self.display_height, self.rect_height):
                 x = i // self.rect_width
                 y = j // self.rect_height
-                # print(str(x) +' ' +  str(y))
                 color = self.__colors[y][x]
                 rect = pygame.Rect((i, j), (self.rect_width, self.rect_height))
                 pygame.draw.rect(
